@@ -1,0 +1,13 @@
+_format_version: "3.0"
+_transform: true
+
+services:
+- name: my-service
+  url: https://dog.ceo/api/breeds/list/all
+  plugins:
+  - name: foo-plugin
+  - name: bar-plugin
+  routes:
+  - name: my-route
+    paths:
+    - /my-route
