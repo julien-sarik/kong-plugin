@@ -9,6 +9,7 @@ function CustomHandler:access(config)
   kong.log("access")
   kong.log.inspect(config.key_names)        -- { "apikey" }
   kong.log.inspect(config.hide_credentials) -- false
+  kong.log.inspect(config.demo_config)
   -- kong.ctx.shared: A table that has the same lifetime as the current request. This table is shared between all plugins. It can be used to share data between several plugins in a given request.
   kong.ctx.shared.foo = "hello world"
   -- kong.ctx.plugin: A table that has the same lifetime as the current request. Unlike kong.ctx.shared, this table is not shared between plugins. Instead, it is only visible for the current plugin instance.

@@ -28,6 +28,11 @@ return {
               default = false,
             },
           },
+          {
+            demo_config = {
+              type = "string",
+            },
+          },
         },
       },
     },

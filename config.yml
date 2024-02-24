@@ -1,13 +1,25 @@
 _format_version: "3.0"
-_transform: true
+_transform: false
 
 services:
 - name: my-service
   url: https://dog.ceo/api/breeds/list/all
   plugins:
   - name: foo-plugin
+    config:
+      demo_config: silver
   - name: bar-plugin
   routes:
   - name: my-route
     paths:
     - /my-route
+- name: my-other-service
+  url: https://dog.ceo/api/breeds/list/all
+  plugins:
+  - name: foo-plugin
+    config:
+      demo_config: gold
+  routes:
+  - name: other-route
+    paths:
+    - /other-route
